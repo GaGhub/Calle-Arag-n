@@ -1,0 +1,293 @@
+* { /*se aplica a toda la web*/
+box-sizing: border-box; /* obliga al contenido a caber en las dimensiones que le marquemos, es como delimitar el tamaño máximo*/
+ 
+  
+}
+body {
+font-size:x-large;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*fuente*/
+  max-width: 100%; 
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center
+}
+header {
+  background-color: white; /*color de fondo*/
+  max-width: 100%; /*ancho máximo*/
+  width: 100%;
+  color: black; /*Color de la fuente*/
+  text-align: center; /*Alineación del texto*/
+  border-radius: 20px;} /*Esquinas redondeadas*//*Después de ver el vídeo, debería definir un prefijo para que los navegadores Web lo lean bien, aunque chrome lo haya realizado como buscaba*/
+   header img {
+     border-radius: 20px; 
+     max-width: 90%;
+     margin-top: 5%;}
+strong {          /*quiero mantener el peso de negrita con strong del archivo HTML*/
+  font-weight: bold;}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* Impide que salten de línea */
+    padding: 0;
+    overflow-x: auto;  /* Permite deslizar si el móvil es muy estrecho */
+    gap: 15px;         /* Espacio entre botones */
+}
+
+nav ul li {
+    display: inline-block;
+     margin-right: 5%; /* separación entre elementos */
+     margin-top: 2%;
+     margin-bottom: 2%}
+
+nav ul li a {
+    text-decoration: none !important; /* Quita el subrayado */
+    color: white;          /* Fuerza el color negro */
+    font-weight: bold;
+    display: block;
+    border-radius: 5px;         /* esquinas redondeadas */
+    display: inline-block; /* Necesario para que el transform funcione correctamente */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+   nav ul li a:hover{
+   background-color: #9E9E9E; /* Color de fondo al pasar el ratón (ejemplo: un gris más oscuro) */
+   color: white;             /* Color de la fuente al pasar el ratón (se mantiene blanco) */
+   transform: scale(1.2); /* Aumenta el tamaño un 20% */
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+   }
+  p {
+    margin-bottom: 5%;}
+  iframe { /*Le doy forma al enlace de la ubicación de google*/
+    border-radius: 20px;
+    margin: 4%;
+    width: 90%;
+      }
+section {
+   background-color: white; 
+   color:#616161; 
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   padding: 1%; /*aplico conceptos del box-sizing*/
+   margin: 2%;
+   border-radius: 50px;}
+     section h2 {
+       text-align: center; 
+       width: 90%;
+       margin: 1%;
+       border-width: 2px;
+       border-radius: 20px;
+       border-style: solid; /*Necesario determinarlo para que se vea*/
+       border-color: #BDBDBD;
+       font-size:x-large;
+       background-image: linear-gradient(to right, #BDBDBD, #9E9E9E); /* Definimos para todas las secciones con título h2 el gradiente como background-image. Lo usaré para definirlo de forma suave de izquierda a derecha, combinando con los colores de la cabecera  */
+       color: #FFFFFF; /*Cambiamo el color del texto para que contraste con el fondo oscuro */
+       padding: 1%; /* Le añado relleno para que se aprecie más el gradiente*/
+          } 
+       
+     section p {
+      width: 90%;
+       margin: 2%;
+        text-align: center;
+       justify-content: center}
+     section img {
+    width: 35%; 
+    height: auto;
+    display: inline-block;
+    margin: 4%;  /* Aumentamos el margen lateral para que sigan centradas de dos en dos */
+    border-radius: 20px;
+    vertical-align:  middle;
+    object-fit: contain; /* Mantiene la imagen íntegra sin recortes */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+      section img:hover {
+       transform: scale(1.05);/* Hago la imagen un 5% más grande */
+       box-shadow: 0 2% 4% rgba(0, 0, 0, 0.1); /* Le añado una sombra sutil para darle profundidad */
+       z-index: 10; /* Asegura que la imagen aumentada esté sobre otras */
+       }
+       section a img { /* le quito el borde/subrayado azul de las imagenes con enlace*/
+        border: none;
+        text-decoration: none; 
+        }
+    
+       table {   
+  width: 90%;
+  margin: 20px auto;
+  border: 2px solid #BDBDBD;  /* define grosor y color del borde exterior */
+ border-collapse: separate; 
+  border-spacing: 0; 
+  border-radius: 20px;
+  table-layout: fixed;
+  overflow: hidden; /* Esto asegura que el fondo de las celdas no se salga de las esquinas */
+  }
+ tr, th, td { 
+  text-align: center;
+  vertical-align: middle;
+  /* Reducimos el borde para que no se vea tosco con el nuevo espaciado */
+  border-bottom: 1px solid #BDBDBD; 
+  border-right: 1px solid #BDBDBD;
+  padding: 2%;
+}
+
+ table img {
+ width: 35%; 
+ height: auto;
+margin: 0 auto;
+object-fit: contain;
+border-radius: 20px;
+display: block;                 /* 🔹 Evita espacio raro debajo de la imagen */
+}
+footer {
+   background-color: white; 
+   color: #212121; 
+   margin-bottom:20%;
+  }
+  footer img {
+    width: 20px;
+    border-radius: 5px
+  }
+.ti-widget {
+    margin-top: 60px; /* Ajusta este valor según el espacio que desees */
+    margin-bottom: 20px;
+}
+
+/* Estilos para la barra inferior fija */
+.barra-contacto-fija {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Menos transparencia para mejor lectura */
+    border-top: 2px solid #BDBDBD;
+    padding: 10px 0;
+    z-index: 9999;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contenedor-flexible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
+    padding: 0 5px;
+}
+
+.barra-contacto-fija img {
+    width: 24px; /* Un poco más grandes para móviles */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 5px;
+}
+
+.texto-cita {
+    color: #cf5468;
+    font-size: 0.5em;
+    font-weight: bold;
+}
+
+.enlace-contacto {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 0.7em; /* Tamaño legible */
+    white-space: nowrap; /* Evita que el número de teléfono se parta en dos líneas */
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 10000; /* Por encima de la barra de contacto */
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Fondo negro con opacidad */
+}
+
+.contenido-modal {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 20px;
+    user-select: none; /* Evita que se seleccione la imagen */
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #cf5468; /* Color de tu marca al pasar el ratón */
+}
+
+/* Deshabilitar arrastrar imagen para evitar descargas fáciles */
+img {
+    pointer-events: auto;
+    -webkit-user-drag: none;
+}
+/* --- AJUSTES ESPECÍFICOS PARA MÓVIL */
+/* --- AJUSTES ESPECÍFICOS PARA MÓVIL (CORREGIDO) --- */
+@media (max-width: 1000px) {
+    body {
+        /* Aumentamos el margen inferior para que la barra no tape el contenido */
+        padding-bottom: 120px !important; 
+        font-size: large; 
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    }
+
+
+
+    /* --- BARRA DE CONTACTO INFERIOR --- */
+    .barra-contacto-fija {
+        padding: 12px 0;
+        font-family: Arial, Helvetica, sans-serif !important;
+    }
+
+    .barra-contacto-fija img {
+        width: 28px !important;  
+        height: 28px !important; 
+    }
+    
+    .contenedor-flexible {
+        flex-direction: column; 
+        gap: 8px; 
+    }
+
+    .texto-cita {
+        display: block;
+        width: 100%;
+        font-size: 0.85em; 
+        color: red; 
+        margin-bottom: 5px;
+        text-transform: uppercase; 
+    }
+
+    .enlace-contacto {
+        font-family: Arial, sans-serif !important;
+        font-size: 1.2em; 
+        font-weight: bold;
+        color: #000; 
+        background: #f0f0f0; 
+        padding: 10px 20px;
+        border-radius: 10px;
+        width: 90%; 
+        margin: 5px auto;
+        justify-content: center;
+    }
+
+    .enlace-contacto span {
+        color: #25D366 !important; 
+    }
+}
